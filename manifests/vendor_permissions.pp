@@ -26,13 +26,13 @@
 
 class stig_misc::vendor_permissions {
     case $osfamily {
-        'darwin': {
+        'Darwin': {
             exec { 'startup_file_permissions':
                 command => "/usr/sbin/diskutil \
                             repairPermissions /",
                 loglevel => warning,
             }
         }
-        default: { unimplemented() }
+        default: { fail "unimplemented on ${::osfamily}" }
     }
 }

@@ -63,6 +63,6 @@ class stig_misc {
         }
 # The Mac OS X STIG stuff is all taken care of elsewhere.
         'Darwin': {}
-        default: { unimplemented() }
+        default: { fail "unimplemented on ${::osfamily}" }
     }
 }
