@@ -33,7 +33,7 @@ class stig_misc::run_control_scripts {
                      '/Library/LaunchDaemons',
                      '/Library/LaunchAgents' ],
         'redhat' => [ '/etc/rc.d' ],
-        default  => unimplemented,
+        default  => fail("unimplemented on ${::osfamily}"),
     }
     file { $run_control_scripts:
         owner => root,
