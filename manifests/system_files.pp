@@ -133,7 +133,7 @@ class stig_misc::system_files {
     file { ['/bin', '/sbin', '/usr/bin', '/usr/sbin']:
         owner => $system_users,
         group => $system_groups,
-        mode => go-w,
+        mode => 'go-w',
         recurse => true,
     }
 

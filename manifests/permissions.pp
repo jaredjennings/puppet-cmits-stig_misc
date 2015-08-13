@@ -22,7 +22,7 @@ class stig_misc::permissions {
 # \implements{unixsrg}{GEN001362,GEN001363,GEN001364} Control ownership and
 # permissions of \verb!resolv.conf!.
     file { "/etc/resolv.conf":
-        owner => root, group => 0, mode => 0644,
+        owner => root, group => 0, mode => '0644',
     }
 # \implements{macosxstig}{GEN001365 M6}%
 # \implements{unixsrg}{GEN001365}%
@@ -33,7 +33,7 @@ class stig_misc::permissions {
 # \implements{unixsrg}{GEN001366,GEN001367,GEN001368}%
 # Control ownership and permissions of the \verb!hosts! file.
     file { "/etc/hosts":
-        owner => root, group => 0, mode => 0644,
+        owner => root, group => 0, mode => '0644',
     }
 # \implements{macosxstig}{GEN001369 M6}%
 # \implements{unixsrg}{GEN001369}%
@@ -43,7 +43,7 @@ class stig_misc::permissions {
 # \implements{unixsrg}{GEN001371,GEN001372,GEN001373} Control ownership and
 # permissions of \verb!nsswitch.conf!.
     file { "/etc/nsswitch.conf":
-        owner => root, group => 0, mode => 0644,
+        owner => root, group => 0, mode => '0644',
     }
 # \implements{unixsrg}{GEN001374} Remove extended ACLs on \verb!nsswitch.conf!.
     no_ext_acl { "/etc/nsswitch.conf": }
@@ -52,7 +52,7 @@ class stig_misc::permissions {
 # \implements{unixsrg}{GEN001378,GEN001379,GEN001380}%
 # Control ownership and permissions of the \verb!passwd! file.
     file { "/etc/passwd":
-        owner => root, group => 0, mode => 0644,
+        owner => root, group => 0, mode => '0644',
     }
 # \implements{macosxstig}{GEN001390 M6}%
 # \implements{unixsrg}{GEN001390} Remove extended ACLs on the \verb!passwd! file.
@@ -62,7 +62,7 @@ class stig_misc::permissions {
 # \implements{unixsrg}{GEN001391,GEN001392,GEN001393}%
 # Control ownership and permissions of the \verb!group! file.
     file { "/etc/group":
-        owner => root, group => 0, mode => 0644,
+        owner => root, group => 0, mode => '0644',
     }
 # \implements{macosxstig}{GEN001394 M6}%
 # \implements{unixsrg}{GEN001394}%
@@ -72,7 +72,7 @@ class stig_misc::permissions {
 # \implements{unixsrg}{GEN001400,GEN001410,GEN001420}%
 # Control ownership and permissions of the \verb!shadow! file.
     file { "/etc/shadow":
-        owner => root, group => 0, mode => 0400,
+        owner => root, group => 0, mode => '0400',
     }
 # \implements{unixsrg}{GEN001430}%
 # Remove extended ACLs on the \verb!shadow! file.
@@ -93,19 +93,19 @@ class stig_misc::permissions {
 # are ``as configured by the vendor:'' only ``device files specifically
 # intended to be world-writable'' are world-writable.
     file { '/dev':
-        owner => root, group => 0, mode => o-w,
+        owner => root, group => 0, mode => 'o-w',
     }
 
 # \implements{rhel5stig}{GEN000000-LNX001431,GEN000000-LNX001432,GEN000000-LNX001433}%
     file { "/etc/gshadow":
-        owner => root, group => 0, mode => 0400,
+        owner => root, group => 0, mode => '0400',
     }
 # \implements{rhel5stig}{GEN000000-LNX001434}%
     no_ext_acl { "/etc/gshadow": }
 
 # \implements{rhel5stig}{GEN000000-LNX00400,GEN000000-LNX00420,GEN000000-LNX00440}%
     file { "/etc/security/access.conf":
-        owner => root, group => 0, mode => 0640,
+        owner => root, group => 0, mode => '0640',
     }
 # \implements{rhel5stig}{GEN000000-LNX00450}%
     no_ext_acl { "/etc/security/access.conf": }

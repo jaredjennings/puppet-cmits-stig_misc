@@ -39,7 +39,7 @@ class stig_misc::run_control_scripts {
         owner => root,
 # RHEL default group owner is root for all these files. 
         group => 0,
-        mode => go-w,
+        mode => 'go-w',
         recurse => true,
         recurselimit => 3,
     }

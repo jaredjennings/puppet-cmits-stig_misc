@@ -19,7 +19,7 @@ class stig_misc::skel {
 # \implements{unixsrg}{GEN001800,GEN001820,GEN001830} Control ownership and
 # permissions of skeleton files.
     file { "/etc/skel":
-        owner => root, group => 0, mode => 0644,
+        owner => root, group => 0, mode => '0644',
         recurse => true, recurselimit => 8,
     }
 # \implements{unixsrg}{GEN001810} Remove extended ACLs from skeleton files.

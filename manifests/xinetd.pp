@@ -36,7 +36,7 @@ class stig_misc::xinetd {
 # \implements{unixsrg}{GEN003720,GEN003730,GEN003740,GEN003750}%
 # Control ownership and permissions of the \verb!xinetd! configuration.
     file { "/etc/xinetd.d":
-        owner => root, group => 0, mode => 0440,
+        owner => root, group => 0, mode => '0440',
     }
 # \implements{unixsrg}{GEN003745,GEN003755}%
 # Remove extended ACLs on \verb!xinetd! configuration.

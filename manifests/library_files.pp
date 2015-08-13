@@ -29,7 +29,7 @@ class stig_misc::library_files {
         default  => [ '/usr/lib', '/usr/local/lib' ],
     }
     file { $library_dirs:
-        mode => go-w,
+        mode => 'go-w',
     }
 
 # \implements{macosxstig}{GEN001310 M6}%

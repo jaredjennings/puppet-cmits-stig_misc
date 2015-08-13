@@ -21,7 +21,7 @@ class stig_misc::login_history::gdm {
         package { "loginhistory": ensure => present, }
         file { "/etc/gdm/PostLogin/Default":
             require => Package["zenity"],
-            owner => root, group => 0, mode => 0755,
+            owner => root, group => 0, mode => '0755',
             ensure => present,
             source => "puppet:///modules/stig_misc/\
 login_history/gdm-post-login.sh",

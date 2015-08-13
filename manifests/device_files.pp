@@ -26,7 +26,7 @@
 
 class stig_misc::device_files {
     file { "/etc/cron.weekly/device-files.cron":
-        owner => root, group => 0, mode => 0700,
+        owner => root, group => 0, mode => '0700',
         source => "puppet:///modules/stig_misc/\
 device_files/device-files.cron",
     }
